@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <title>Star Fighter</title>
+    </head>
+
+    <body onkeydown="pressed(event)">
+        <div id="app">
+            <div id="myPlayer" class="avenger player"></div>
+            <div class="enemy gladius player" v-for="enemy in enemies" :id="enemy.id + 'id'" :display="enemy.alive"></div>
+            <div class="missile" v-for="missile in missiles" :id="missile.id + 'id'"></div>
+        </div>
+    </body>
+    <script src="vue.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+</html>
